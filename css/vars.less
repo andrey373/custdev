@@ -1,0 +1,108 @@
+//main: main.less
+
+
+   //  color  vars
+@color-white:#fff;
+@color-000:#1a1a1a;
+@text-fff:#fff;
+@main-text:#1a1a1a;
+@l-grey:#cccccc;
+@color-btn-active:#2F80ED;
+@color-secondary:#2F80ED;
+@color-btn-hover:darken(@color-btn-active,20%);
+@logo:#9fc5f7;
+@btn-title:#64E2CD;
+@btn-title-shadow:fade(@btn-title,50%);
+@color-covert:rgba(0, 0, 0, 0.91);
+@covert-link:fade(lighten(@color-covert,10%),70%);
+@text-color-secondary:#636363;
+@black:#323232;
+@bg-form:rgba(47, 128, 237, 0.05);
+@bg-copyright:#185FBF;
+@color-border:rgba(47, 128, 237, 0.3);
+@text-input:#C6C6C6;
+@modal_img_slide:rgba(47, 128, 237, 0.38);
+//=======================================
+  
+       //font  vars
+
+@font-btn:1rem;
+@reg-font:14px;
+@text:16px;
+@title:40px;
+@title-modul:55px;
+@text-comment-one:25px;
+@text-comment-two:35px;
+@font-title-secondary:30px;
+@text-number:30px;
+@text-title-modul:20px;
+@font-title-third:14px;
+
+
+
+
+
+
+
+//========================================
+             //  mixin button
+
+
+.btn(){
+	font-size:1rem;
+	font-family:Montserrat-Regular,sans-serif;
+	padding: 1em 1.9em;
+	font-weight:bold;
+	border-radius: 50px;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	white-space: nowrap;
+	transition: color 1s;
+	&:hover{color:@color-btn-hover;}
+}
+
+
+.btn_condition(@bg-color){
+	background-color:@bg-color;
+}
+
+.btn_condition(@bg-color) when (lightness(@bg-color) >= 50%){
+	color:@color-secondary;
+}
+
+.btn_condition(@bg-color) when (lightness(@bg-color) < 70%){
+	color:@text-fff;
+}
+
+//mixin modal
+
+.modal(){
+	margin-right: 35px;
+	padding: 15px 35px;
+	border: 1px solid @color-border;
+	outline: 0;
+	font-weight: 500;
+	font-family: inherit;
+	line-height: 154%;
+	margin-bottom: 30px;
+	width: 265px;
+}
+
+//========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

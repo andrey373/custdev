@@ -1,0 +1,47 @@
+//main:main.less
+
+.clients_two{
+	margin-top:100px;
+	padding: 130px 0 170px;
+	background: url("../img/Rect1.png") no-repeat;
+	background-size:90% 100%;
+	background-position:right;
+	position: relative;
+	h2{
+		margin: 0 auto;
+		margin-bottom: 60px;
+		text-align: center;
+	}	
+}
+
+.circle{
+		width: 231px;
+		height: 231px;
+		border-radius: 50%;
+		position: absolute;
+		right:-37px;
+		top:-24px;
+		background:radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF;
+		box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+		filter:blur(20px);
+	}
+
+.clients_two_content{
+	margin: 0 auto;
+	.flex_box();
+	.jus_center();
+	dl{
+		width:15.6vw;
+		min-width: 178px;
+		margin-right:6.9vw;
+		dt{
+			margin-bottom:10px;
+		}
+		dd{
+			color:@text-color-secondary;
+		}
+	}
+	dl:last-child{
+		margin-right: 0;	
+	}
+}

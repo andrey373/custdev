@@ -1,0 +1,74 @@
+//main:main.less
+
+.result{
+	padding: 165px 0 110px;
+	background: 
+		url("../img/Rectangle2.png")no-repeat;
+	background-size:90% 100%;
+}
+
+.result_container{
+	width:1170px;
+	margin: 0 auto;
+	h2{
+		color:@text-fff;
+		margin-bottom: 65px;
+	}
+}
+
+.result_content{
+	.flex_box();
+	.jus_sp_be();
+//	.jus_center();
+	.flex_wrap();
+}
+
+.result_content{
+	div{
+		padding:56px;
+		padding-left:150px;
+		width: 566px;
+		background-color:@color-white;
+		margin-bottom: 40px;
+		box-shadow:0px 10px 30px rgba(47, 55, 237, 0.1);
+		border-radius:10px;
+		h3{
+			letter-spacing:.05em;
+			margin-bottom: 10px;
+			font-size:@text;
+			position: relative;
+			&::before{
+				content:"";
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				left:-95px;
+				top:0;
+				background:url("../img/spritesheet.png") no-repeat;
+				background-position:-5px;
+			}
+		}
+		p{
+			color:@text-color-secondary;
+			font-size:@text;
+		}
+	} 
+//	div:nth-child(odd){margin-right: 40px;}
+}
+
+
+.result_content div:nth-child(2) h3::before{
+	background-position: -75px -6px;
+}
+.result_content div:nth-child(3) h3::before{
+	background-position: -215px -5px;
+}
+.result_content div:last-child h3::before{
+	background-position: -145px -5px;
+}
+
+
+
+
+
+

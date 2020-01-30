@@ -1,0 +1,189 @@
+a{text-decoration:none;white-space: nowrap;}ul,dl,ol{margin:0;padding:0;}li{list-style:none;}
+*,*:after,*:before{box-sizing: border-box;}h1,h2,h3,h4,p,dd{margin:0;}button{outline:none;}
+
+
+@import url("mixin-flex");
+@import url("vars");
+
+
+.container_wrap{
+  width: 80vw;
+  margin: 0 auto;
+	@media(max-width:1200px){
+		width: 90vw;
+	}
+}
+
+html,body{
+	font-size: 14px;
+	@media(min-width:1600px){
+	}
+}
+body{
+    font-family: Montserrat-Regular,sans-serif;
+	padding: 0;
+	margin: 0;
+	color:@color-000;
+}
+
+h2{
+	font-size:@font-title-secondary;
+	font-family:Montserrat-Bold, sans-serif;
+	color:@black;
+	line-height: 124%;
+}
+
+h3,
+dt{
+	font-size: @font-title-third;
+	font-family:Montserrat-SemiBold,sans-serif;
+	color:@color-secondary;
+	line-height: 143%;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+dd{line-height: 143%;}
+
+
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+	font-family:"Montserrat-SemiBold"; 
+	src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+	font-family:"Montserrat-Bold"; 
+	src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+	font-family:"MarckScript-Regular"; 
+	src: url("../fonts/MarckScript-Regular.ttf");
+}
+
+//  header styles
+
+@import url("header");
+
+//     clients
+
+@import url("clients");
+
+
+@import url("clients-two");
+
+
+@import url("route");
+@import url("result");
+@import url("warranty");
+@import url("comments");
+@import url("history");
+@import url("price");
+@import url("pricetwo");
+@import url("footer");
+@import url("modul");
+//@import url("details_modul");
+
+#black_fill{
+	background-color: rgba(0, 0, 0, 0.40);
+	width:100%;
+	height:100%;
+	position:fixed;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+
+
+#modal_box{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	width: 90vw;
+	max-width: 385px;
+	height: 405px;
+	display: none;
+	form{
+		display: inline-block;
+		padding: 60px 40px 20px;
+		background-color:@color-white;
+		border-radius:10px;
+		position: relative;
+		width: 100%;
+		input{
+			.modal();
+			display: block;
+			margin-right: 0;
+			width: 100%;
+		}
+		input::placeholder{
+			color:@text-input;
+		}
+		input[type="submit"]{
+			.btn();
+			.btn_condition(@btn-title);
+			letter-spacing: 0.05em;
+			padding: 1em 3.3em;
+		}
+		
+		.modal_cross{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			right:0;
+			top: -35px;
+			cursor: pointer;
+			transition:transform .2s;
+			&:hover{
+				transform: scale(.9);
+				
+			}
+		}
+	}
+}
+
+
+.arrow{
+	width:50px;
+	height: 50px;
+	background-color:rgba(106, 96, 227, 0.57);
+	border-radius:10px;
+	position: fixed;
+	bottom:50px;
+	right: 0;
+	display: none;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		background-color: rgba(106, 96, 227, 0.77)
+	}
+}
+
+.arrow::after{
+	content:"";
+	border:15px solid;
+	border-color:transparent transparent #fff transparent;
+	display: inline-block;
+}
+
+.wraper{
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+//main:main.less
+
+.price{
+	padding-top: 3vw;
+	background: url("../img/Rect.svg") no-repeat;
+	background-position: center;
+	position: relative;
+	h2{
+		margin-bottom: 60px;
+		text-align: center;
+	}
+}
+
+.price_content{
+	.flex_box();
+	.flex_wrap();	
+	.jus_center();
+	max-width: 1200px;
+	padding: 0 50px;
+	margin: 0 auto;
+	>div{
+		width: 270px;
+		height: 290px;
+		text-align: center;
+		margin:0 40px 40px 0;
+		background-color:@color-white;
+		box-shadow: 0px 20px 50px rgba(47, 55, 237, 0.12);
+		border-radius:10px;
+	}
+}
+
+.price_content{
+	div{
+		h3{
+			font-size:@text-comment-one;
+			font-family:Montserrat-Bold, sans-serif; 
+			margin: 70px 0 10px;
+			line-height: 40px;
+			text-transform: lowercase;
+		}
+		p{
+			color:@color-secondary;
+			font-weight: 600;
+			line-height: 158%;
+		}
+		button{
+			.btn();
+			.btn_condition(@btn-title);
+			padding: 1.3em 2.95em;
+			margin-top: 35px;
+		}
+	}
+}
+
+.price_content div:nth-child(3){
+	position: relative;
+}
+.price_content div:nth-child(3),
+.price_content div:last-child
+{margin-right:0;}
+.price_content > div:last-child{
+	width: 570px;
+	height: 160px;
+	padding: 0 80px;
+	.flex_box();
+	.jus_sp_be();
+	.al_center();
+	
+	h3,
+	button{
+		margin-top: 0;
+	}
+}
+
+.circle_price{
+	width:230px;
+	height:230px;
+	position: absolute;
+	right:-55px;
+	top:-90px;
+	z-index:-10;
+	background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF;
+	box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+	filter: blur(20px);
+	border-radius: 50%;
+}
+
+.circle_price_small{
+	width:140px;
+	height:140px;
+	position: absolute;
+	left:-55px;
+	bottom:0;
+	z-index:-10;
+	background:radial-gradient(circle, #6aaaff 0%, #2f80ed 50%,rgba(0, 212, 255, 0) 65%),rgba(47, 128, 237, 0.17);
+	box-shadow:0px 10px 50px rgba(119, 157, 255, 0.3);
+	border-radius: 50%;
+}
+
+.price_content > div:nth-child(3){ 			       >.circle_profitable{
+		position: absolute;
+		width: 90px;
+		height: 90px;
+		top: -20px;
+		right: -20px;
+		background-color:@color-secondary;
+		border-radius: 50%;
+		color: @text-fff;
+		text-align: center;
+		line-height: 90px;
+		vertical-align: middle;
+		font-size: 12px;
+	}
+}
+
+

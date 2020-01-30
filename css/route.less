@@ -1,0 +1,80 @@
+//main:main.less
+.route{padding:100px 0 50px;}
+.route_container{
+	margin: 0 auto;
+	position: relative;
+	width:71vw;
+	max-width:1050px;
+	min-width: 880px;
+	padding-right: 330px;
+	h2{
+		margin-bottom: 45px;
+	}
+}
+
+.route_left{
+	.flex_box();
+	.flex_wrap();
+	dl{
+		width:228px;
+		margin-bottom: 60px;
+		dt{
+			margin-bottom: 10px;
+		}
+		dd{
+			color:@text-color-secondary;
+		}
+	}
+	dl:nth-child(odd){
+		margin-right:4.86vw;
+	}
+	a{
+		text-transform: uppercase;
+		color:@color-secondary;
+		padding-bottom: 5px;
+		letter-spacing:.5px;
+		font-weight: 600;
+	}
+}
+
+.route_left{
+	.copy_text{display: none;}
+}
+
+
+.route_right{
+	position:absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width:330px;
+	height: 210px;
+	padding: 60px;
+	box-shadow:0px 30px 100px rgba(47, 55, 237, 0.1);
+	border-radius: 10px;
+	dl{
+			margin-bottom: 10px;
+	}
+	.route_circle{
+		width:125px;
+		height:125px;
+		border-radius:50%;
+		position: absolute;
+		right:-62.5px;
+		top:-62.5px;
+		background:radial-gradient(circle, #6aaaff 0%, #2f80ed 45%,rgba(0, 212, 255, 0) 56%),rgba(47, 128, 237, 0.17);
+		box-shadow:0px 10px 50px rgba(119, 157, 255, 0.3);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
