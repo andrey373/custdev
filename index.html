@@ -8,8 +8,8 @@
     <meta name="description" content="ТЫ НАЧНЁШЬ ДЕЛАТЬ CUSTOMER DEVELOPMENT И ПРОВЕРЯТЬ ГИПОТЕЗЫ В СВОЁМ ПРОЕКТЕ">
 	<title>Customer Development</title>
 	<link rel="stylesheet" href="css/main.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/responsive.min.css" type="text/css">
-	<link rel="stylesheet" href="css/aos.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/responsive.min.css" type="text/css" media="all">
+	
 	<link rel="shortcut icon" href="img/growth.png" type="image/x-icon">
 </head>
 <body>
@@ -81,10 +81,10 @@
 	<section class="clients">
 		<div class="container_wrap">
 			<div class="clients_container">
-				<div class="clients_container_left" data-aos="fade-right" data-aos-duration="1500">
+				<div class="clients_container_left">
 					<h2>Если вы не делаете<br> Customer Development — <br> вы не управляете <br>движением <br>к product-market fit</h2>
 				</div>
-				<div class="clients_container_right" data-aos="fade-left" data-aos-duration="1500">
+				<div class="clients_container_right">
 					<dl>
 						<dt>94%</dt>
 						<dd>стартапов умирают в течение 3 лет, и главная причина этого — отсутствие  product-market fit</dd>
@@ -108,7 +108,7 @@
 	<!--         clients_two          -->
 	<section class="clients_two">
 		<div class="circle"></div>
-		<div class="clients_two_box" data-aos="fade-left" data-aos-duration="1500"> 
+		<div class="clients_two_box"> 
 		<h2>Кому и зачем знать Customer Development</h2>
 		<div class="clients_two_content">
 			<dl>
@@ -191,23 +191,15 @@
 		<div class="warranty_container">
 		<h2>Почему мне можно доверять</h2>
 			<div class="warranty_video">
-				<video poster="img/secondary_img/image6.jpg" id="video-player"  onClick="PlayPauseVideo()">
+				<video poster="img/secondary_img/image6.jpg" id="video-player">
 					<source src="video/video.mp4" type="video/mp4">
 				</video>
-					<div id="controls">
-						<button type="button" id="play" onClick="PlayPauseVideo()"></button>
-						<label >
-						<input type="range" id="volume" min="0" max="100" onMouseMove="changeVolume()">
-						</label>
-						<button type="button" id="full_scale" onClick="fullScreen()"></button>
-						<input type="range" id="prog" onMouseDown="clearAnimateRange()"
-						 onMouseUp="movedRange()">
-					</div>
-					<div class="video_item" data-aos="flip-down" data-aos-duration="1500">
+					
+					<div class="video_item">
 						<h3>Алексей Иванов</h3>
 						<p>Ex-Lead Product Manager</p>
 					</div>
-					<div id="video_fill" onClick="PlayPauseVideo()">
+					<div id="video_fill">
 						<div id="play_btn">
 							<div id="play_btn_triagle"></div>
 						</div>
@@ -296,28 +288,23 @@
 	<section class="price" id="anchor_price">
 	<h2>Стоимость для компаний</h2>
 		<div class="price_content">
-			<div data-aos="flip-left"
-     			data-aos-easing="ease-out-cubic"
-     			data-aos-duration="1500">
+			<div>
 				<h3>32 900 ₽</h3>
 				<p>1 сотрудник</p>
 				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
 			</div>
-			<div data-aos="fade-up"
-     			data-aos-duration="1500">
+			<div>
 				<h3>29 900 ₽ / чел</h3>
 				<p>2 сотрудника</p>
 				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
 			</div>
-			<div data-aos="flip-right"
-     			data-aos-easing="ease-out-cubic"
-     			data-aos-duration="1500">
+			<div>
 				<h3>26 900 ₽ / чел</h3>
 				<p>5+ сотрудников</p>
 				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
 				<div class="circle_profitable">выгодно</div>
 			</div>
-			<div data-aos="flip-down" data-aos-duration="1500">
+			<div>
 				<div>
 					<h3>25 900 ₽</h3>
 					<p>Тариф “Для себя”</p>
@@ -343,15 +330,14 @@
 				</div>
 				<div class="block_video">
 					<div class="price_two_video">
-					<video poster="img/secondary_img/image6.jpg" id="playerVideo">  
-					<source src="video/video.mp4" type="video/mp4">
-					</video>
-					<div class="video_fill_copy"
-					 onClick="playerSmall()">
-						<div class="play_btn_copy">
-							<div class="play_btn_triagle_copy"></div>
+						<video poster="img/secondary_img/image6.jpg" id="playerVideo">  
+							<source src="video/video.mp4" type="video/mp4">
+						</video>
+						<div class="video_fill_copy">
+							<div class="play_btn_copy">
+								<div class="play_btn_triagle_copy"></div>
+							</div>
 						</div>
-					</div>
 					</div>
 					<h3>Видеозапись курса</h3>
 				</div>
@@ -414,11 +400,6 @@
 	<script src="js/aos.js"></script><!--https://michalsnik.github.io/aos/-->
 	<script src="js/control.js"></script>
 	<script src="js/galery.js"></script>
-	<script>
-	 	AOS.init({// Global settings:
-  		disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		once:true, // whether animation should happen only once - while scrolling down
- 		});
-	</script><!--https://michalsnik.github.io/aos/-->
+	
 </body>
 </html>
