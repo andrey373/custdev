@@ -10,10 +10,30 @@ $(function(){
 
 
 	// script for modal window 
-	var show = function (state) {
-		document.getElementById('black_fill').style.display = state;
-		document.getElementById('modal_box').style.display = state;
-	};
+
+	let blackFill = $('.black_fill');
+	let modalCross = $('.modal_cross');
+	let bodyPage = $('body');
+	$('.modal_open').on('click', function(evt){
+		evt.preventDefault();
+		$(blackFill).addClass('modal--active');
+		$(bodyPage).addClass('body--active');
+		$('.modal_box').click(function(evt){
+			evt.stopPropagation();
+		})
+	});
+
+	$('.black_fill').on('click', function(){
+		$('.black_fill').removeClass('modal--active');
+		$('.modal_box').removeClass('modal--active');
+		$(bodyPage).removeClass('body--active');
+	});
+
+	$(modalCross).on('click', function(){
+		$('.black_fill').removeClass('modal--active');
+		$('.modal_box').removeClass('modal--active');
+		$(bodyPage).removeClass('body--active');
+	});
 
 	/* arrow scroll */
 
@@ -40,16 +60,6 @@ $(function(){
 			},
 			800
 		);
-	});
-
-
-	/* script for video player */
-
-	let videoBlock = $('#video-player');
-	let videoPlay = $('#play_btn_triagle');
-
-	$(videoPlay).on('click', function(){
-		
 	});
 
 });

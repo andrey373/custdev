@@ -12,14 +12,17 @@ a{text-decoration:none;white-space: nowrap;}ul,dl,ol{margin:0;padding:0;}li{list
 
 html,body{
 	font-size: 14px;
-	@media(min-width:1600px){
-	}
 }
+
 body{
     font-family: Montserrat-Regular,sans-serif;
 	padding: 0;
 	margin: 0;
 	color:@color-000;
+	min-width: 320px;
+}
+.body--active{
+	overflow: hidden;
 }
 
 h2{
@@ -60,45 +63,40 @@ dd{line-height: 143%;}
 	src: url("../fonts/MarckScript-Regular.ttf");
 }
 
-@import url("mixin-flex");
-@import url("vars");
-@import url("header");
-@import url("clients");
-@import url("clients-two");
-@import url("route");
-@import url("result");
-@import url("warranty");
-@import url("comments");
-@import url("history");
-@import url("price");
-@import url("pricetwo");
-@import url("footer");
-@import url("modul");
 
+@import url('mixin-flex.less');
+@import url('vars.less');
+@import url('header.less');
+@import url('clients.less');
+@import url('clients-two.less');
+@import url('route.less');
+@import url('result.less');
+@import url('warranty.less');
+@import url('comments.less');
+@import url('history.less');
+@import url('price.less');
+@import url('pricetwo.less');
+@import url('footer.less');
+@import url('modul.less');
 
-#black_fill{
+.black_fill{
 	background-color: rgba(0, 0, 0, 0.40);
 	width:100%;
 	height:100%;
+	padding: 50px 10px;
 	position:fixed;
 	left: 0;
 	top: 0;
 	display: none;
+	overflow: auto;
 }
 
 
-
-#modal_box{
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
+.modal_box{
 	margin: auto;
 	width: 90vw;
 	max-width: 385px;
 	height: 405px;
-	display: none;
 	form{
 		display: inline-block;
 		padding: 60px 40px 20px;
@@ -138,6 +136,9 @@ dd{line-height: 143%;}
 	}
 }
 
+.modal--active{
+	display: flex;
+}
 
 .arrow{
 	width:50px;
@@ -165,7 +166,6 @@ dd{line-height: 143%;}
 .wraper{
 	overflow: hidden;
 }
-
 
 
 

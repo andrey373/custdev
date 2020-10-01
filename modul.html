@@ -25,7 +25,7 @@
 							<li><a href="#">Минск</a></li>
 						</ul>
 					</li>
-					<li class="btn_course" onclick="show('block')"><a href="#">Запись на курс</a></li>
+					<li class="btn_course modal_open"><a href="#">Запись на курс</a></li>
 				</ul>
 				<ul class="menu_left_normal menu_left_normal_modul">
 					<li><a href="#">Санкт-Петербург</a></li>
@@ -43,7 +43,7 @@
 						<li><a href="index.html#anchor_price">Стоимость</a></li>
 						<li><a href="index.html#anchor_warranty">О преподавателе</a></li>
 					</ul>
-					<button type="button" onclick="show('block')">Запись на курс</button>
+					<button class="modal_open" type="button">Запись на курс</button>
 				</div>			
 			</div>
 				<div class="top_menu_right">
@@ -53,7 +53,7 @@
 						<li><a href="index.html#anchor_price">Стоимость</a></li>
 						<li><a href="index.html#anchor_warranty">О преподавателе</a></li>
 					</ul>
-					<button type="button" onclick="show('block')">Запись на курс</button>
+					<button class="modal_open" type="button">Запись на курс</button>
 				</div>
 			</nav>
 		</div>
@@ -226,7 +226,7 @@
 					<li><a href="#">Москва</a></li>
 					<li><a href="#">Минск</a></li>
 				</ul>
-				<button type="button" onclick="show('block')">Запись на курс</button>
+				<button class="modal_open" type="button">Запись на курс</button>
 			</div>
 		</div>
 		<div class="copyright_container">
@@ -242,14 +242,14 @@
 </div>
 
            <!--      modal window         -->
-	<div id="black_fill" onclick="show('none')"></div>
+	<div id="black_fill"></div>
 	<div id="modal_box">
 		<form action="#" method="post">
 			<input type="text" name="name" required placeholder="Имя">
 			<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Телефон">
 			<input type="email" required placeholder="E-mail">
 			<input type="submit" value="Записаться">
-			<div class="modal_cross" onclick="show('none')"></div>
+			<div class="modal_cross"></div>
 		</form>
 	</div>
 

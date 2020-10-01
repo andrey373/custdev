@@ -7,10 +7,12 @@
     <meta name="keywords" content="custdev,Customer Development,product-market fit">
     <meta name="description" content="ТЫ НАЧНЁШЬ ДЕЛАТЬ CUSTOMER DEVELOPMENT И ПРОВЕРЯТЬ ГИПОТЕЗЫ В СВОЁМ ПРОЕКТЕ">
 	<title>Customer Development</title>
-	<link rel="stylesheet" href="css/main.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/responsive.min.css" type="text/css" media="all">
-	
 	<link rel="shortcut icon" href="img/growth.png" type="image/x-icon">
+	<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
+	
+	
 </head>
 <body>
 <div class="wraper"><!--wraper for overflow-->
@@ -27,7 +29,7 @@
 							<li><a href="#">Минск</a></li>
 						</ul>
 					</li>
-					<li class="btn_course" onclick="show('block')"><a href="#">Запись на курс</a></li>
+					<li class="btn_course modal_open"><a href="#">Запись на курс</a></li>
 				</ul>
 				<ul class="menu_left_normal">
 					<li><a href="#">Санкт-Петербург</a></li>
@@ -45,7 +47,7 @@
 						<li><a href="#anchor_price">Стоимость</a></li>
 						<li><a href="#anchor_warranty">О преподавателе</a></li>
 					</ul>
-					<button type="button" onclick="show('block')">Запись на курс</button>
+					<button class="modal_open" type="button">Запись на курс</button>
 				</div>			
 			</div>
 				<div class="top_menu_right">
@@ -55,7 +57,7 @@
 						<li><a href="#anchor_price">Стоимость</a></li>
 						<li><a href="#anchor_warranty">О преподавателе</a></li>
 					</ul>
-					<button type="button" onclick="show('block')">Запись на курс</button>
+					<button class="modal_open" type="button">Запись на курс</button>
 				</div>
 			</nav>
 		</div>
@@ -66,7 +68,7 @@
 				Начни делать<br> Customer Development<br> и проверять гипотезы
 			</h1>
 			<p>На оффлайн курсе из 5 воркшопов</p>
-			<button type="button"  onclick="show('block')">ЗАПИСАТЬСЯ</button>
+			<button class="modal_open" type="button">ЗАПИСАТЬСЯ</button>
 		</div>
 		<div class="header_mail">
 			<p>Оценка</p>
@@ -190,20 +192,23 @@
 	<section class="warranty" id="anchor_warranty">
 		<div class="warranty_container">
 		<h2>Почему мне можно доверять</h2>
-			<div class="warranty_video">
-				<video poster="img/secondary_img/image6.jpg" id="video-player">
-					<source src="video/video.mp4" type="video/mp4">
+			<div class="warranty_video video_control_block">
+				<video 
+				id="my-video"
+    			class="video-js"
+    			controls
+    			preload="auto"
+    			poster="img/secondary_img/image6.jpg"
+				data-setup="{}"
+				>
+
+				<source src="video/video.mp4" type="video/mp4" />
 				</video>
 					
-					<div class="video_item">
-						<h3>Алексей Иванов</h3>
-						<p>Ex-Lead Product Manager</p>
-					</div>
-					<div id="video_fill">
-						<div id="play_btn">
-							<div id="play_btn_triagle"></div>
-						</div>
-					</div>
+				<div class="video_item">
+					<h3>Алексей Иванов</h3>
+					<p>Ex-Lead Product Manager</p>
+				</div>
 			</div>
 			<div class="warranty_content">
 				<div>
@@ -291,17 +296,17 @@
 			<div>
 				<h3>32 900 ₽</h3>
 				<p>1 сотрудник</p>
-				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
+				<button class="modal_open" type="button">ОФОРМИТЬ</button>
 			</div>
 			<div>
 				<h3>29 900 ₽ / чел</h3>
 				<p>2 сотрудника</p>
-				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
+				<button class="modal_open" type="button">ОФОРМИТЬ</button>
 			</div>
 			<div>
 				<h3>26 900 ₽ / чел</h3>
 				<p>5+ сотрудников</p>
-				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
+				<button class="modal_open" type="button">ОФОРМИТЬ</button>
 				<div class="circle_profitable">выгодно</div>
 			</div>
 			<div>
@@ -309,7 +314,7 @@
 					<h3>25 900 ₽</h3>
 					<p>Тариф “Для себя”</p>
 				</div>
-				<button type="button" onclick="show('block')">ОФОРМИТЬ</button>
+				<button class="modal_open" type="button">ОФОРМИТЬ</button>
 			</div>									
 		</div>
 		<div class="circle_price"></div>
@@ -329,17 +334,20 @@
 					<p>можно прочитать книгу (бумажный тираж закончился)</p>
 				</div>
 				<div class="block_video">
-					<div class="price_two_video">
-						<video poster="img/secondary_img/image6.jpg" id="playerVideo">  
-							<source src="video/video.mp4" type="video/mp4">
-						</video>
-						<div class="video_fill_copy">
-							<div class="play_btn_copy">
-								<div class="play_btn_triagle_copy"></div>
-							</div>
-						</div>
+					<div class="price_two_video video_control_block">
+						<!-- <video
+						id="my-video"
+    					class="video-js"
+    					controls
+    					preload="auto"
+    					poster="img/secondary_img/image6.jpg"
+						data-setup="{}"
+						>  
+
+						<source src="video/video.mp4" type="video/mp4" />
+						</video> -->
 					</div>
-					<h3>Видеозапись курса</h3>
+					
 				</div>
 				<div>
 					<h3>Бессмертный чат</h3>
@@ -367,7 +375,7 @@
 					<li><a href="#">Москва</a></li>
 					<li><a href="#">Минск</a></li>
 				</ul>
-				<button type="button" onclick="show('block')">Запись на курс</button>
+				<button class="modal_open" type="button">Запись на курс</button>
 			</div>
 		</div>
 		<div class="copyright_container">
@@ -383,21 +391,24 @@
 </div>	
 	
            <!--      modal window         -->
-	<div id="black_fill" onclick="show('none')"></div>
-	<div id="modal_box">
-		<form action="#" method="post">
-			<input type="text" name="name" required placeholder="Имя">
-			<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Телефон">
-			<input type="email" required placeholder="E-mail">
-			<input type="submit" value="Записаться">
-			<div class="modal_cross" onclick="show('none')"></div>
-		</form>
+	<div class="black_fill">
+		<div class="modal_box">
+			<form action="#" method="post">
+				<input type="text" name="name" required placeholder="Имя">
+				<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Телефон">
+				<input type="email" required placeholder="E-mail">
+				<input type="submit" value="Записаться">
+				<div class="modal_cross"></div>
+			</form>
+		</div>
 	</div>
 	
 	<div class="arrow"></div><!-- arrow to top  -->
 
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/aos.js"></script><!--https://michalsnik.github.io/aos/-->
+	
+	<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 	<script src="js/control.js"></script>
 	<script src="js/galery.js"></script>
 	

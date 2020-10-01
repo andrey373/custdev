@@ -22,12 +22,16 @@
 		object-fit: cover;
 		border-radius: 10px;
 		border: 0;
+		&:focus{
+			outline: none;
+		}
 	}
 }
 
 .warranty_video{
 	display: inline-block;
 	line-height: 0;
+	border-radius: 10px;
 		.video_item{
 			width: 351px;
 			height: 212px;
@@ -50,6 +54,38 @@
 		}
 }
 
+//  settings video player
+
+.video_control_block .video-js{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.video_control_block .video-js .vjs-big-play-button{
+	background-color: rgba(61, 117, 199, 0.69);
+	border-radius: 50%;
+	border: none;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70px;
+	height: 70px;
+}
+
+.video_control_block .video-js .vjs-big-play-button{
+	line-height: 70px;
+}
+
+.video_control_block .vjs-poster{
+	border-radius: 10px;
+}
+
+.video_control_block .vjs-has-started .vjs-control-bar{
+	border-radius: 0 0 10px 10px;
+}
+
+//  =========================
 .warranty_content{
 	.flex_box();
 	.flex_wrap();
@@ -97,8 +133,6 @@
 .warranty_content div:last-child h3:before{
 	background-position: -298px -5px;
 }
-
-
 
 
 
