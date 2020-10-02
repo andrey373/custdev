@@ -25,7 +25,7 @@
 							<li><a href="#">Минск</a></li>
 						</ul>
 					</li>
-					<li class="btn_course modal_open"><a href="#">Запись на курс</a></li>
+					<li class="btn_course modal_open"><a class="modal_open" href="#">Запись на курс</a></li>
 				</ul>
 				<ul class="menu_left_normal menu_left_normal_modul">
 					<li><a href="#">Санкт-Петербург</a></li>
@@ -40,8 +40,8 @@
 					<ul>
 						<li><a href="#">Программа</a></li>
 						<li><a href="#anchor_comments_modul">Отзывы</a></li>
-						<li><a href="index.html#anchor_price">Стоимость</a></li>
-						<li><a href="index.html#anchor_warranty">О преподавателе</a></li>
+						<li><a href="#">Стоимость</a></li>
+						<li><a href="#">О преподавателе</a></li>
 					</ul>
 					<button class="modal_open" type="button">Запись на курс</button>
 				</div>			
@@ -50,8 +50,8 @@
 					<ul>
 						<li><a href="#">Программа</a></li>
 						<li><a href="#anchor_comments_modul">Отзывы</a></li>
-						<li><a href="index.html#anchor_price">Стоимость</a></li>
-						<li><a href="index.html#anchor_warranty">О преподавателе</a></li>
+						<li><a href="#">Стоимость</a></li>
+						<li><a href="#">О преподавателе</a></li>
 					</ul>
 					<button class="modal_open" type="button">Запись на курс</button>
 				</div>
@@ -62,7 +62,6 @@
 	<div class="under_top">
 		<ul class="under_top_menu">
 			<li><a href="index.html">Главная .</a></li>
-			<li><a href="index.html#anchor_price">Стоимость .</a></li>
 			<li><a href="#anchor_comments_modul">Отзывы</a></li>
 		</ul>
 		<h2 class="under_top_title">Что будет на курсе</h2>
@@ -242,28 +241,23 @@
 </div>
 
            <!--      modal window         -->
-	<div id="black_fill"></div>
-	<div id="modal_box">
-		<form action="#" method="post">
-			<input type="text" name="name" required placeholder="Имя">
-			<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Телефон">
-			<input type="email" required placeholder="E-mail">
-			<input type="submit" value="Записаться">
-			<div class="modal_cross"></div>
-		</form>
+	<div class="black_fill">
+		<div class="modal_box">
+			<form action="#" method="post">
+				<input type="text" name="name" required placeholder="Имя">
+				<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Телефон">
+				<input type="email" required placeholder="E-mail">
+				<input type="submit" value="Записаться">
+				<div class="modal_cross"></div>
+			</form>
+		</div>
 	</div>
-
 	<div class="arrow"></div><!-- arrow to top  -->
 
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/aos.js"></script><!--https://michalsnik.github.io/aos/-->
+	
 	<script src="js/control.js"></script>
 	<script src="js/galery.js"></script>
-	<script>
-	 	AOS.init({// Global settings:
-  		disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		once:true, // whether animation should happen only once - while scrolling down
- 		});
-	</script><!--https://michalsnik.github.io/aos/-->
+	
 </body>
 </html>

@@ -653,75 +653,69 @@
 		padding: 150px 0 135px;  
 	}
 	
-	.price_two_content > div:first-child,
-	.price_two_content > div:nth-child(2),
-	.price_two_content > div:last-child{
-	padding:160px 60px 55px 60px;		
-	}
-	
-.price_two_content div:first-child h3::before,
-.price_two_content div:nth-child(2) h3::before,
-.price_two_content div:last-child h3::before{
-			left: 0;
-			top: -100px;
-		}
-	
-	.price_two_content > div:first-child{
-		background-color: #fff;
-		padding-top: 200px;
-	}
-	
-	.price_two_content div:first-child h3{
-		display: block;
-	}
-	
-	.price_two_content div:first-child h3::before{
-		display: block;
-		top: -140px;
-	} 
-	
-	.price_two_content div:first-child::after{
-		display: none;
-	}
-	
-	.price_two_container{
-		width: 100%;
-	}
-	
 	.price_two_container h2{
 		text-align: center;
 		padding: 0 25px;
 	}
 	
-	.price_two_content > div{
-		width: 39vw;
-		margin: 0 4.75vw 6.2vw 0;
-		min-width: 285px;
-	}
-	
-	.price_two_content .block_video{
-		padding: 5.23vw 5.7vw;
-	}
 	
 }
 
-@media(max-width:750px){
+@media(max-width: 880px){
+
 	.price_two_content{
-		flex-direction: column;
-		align-items: center;
+		max-width: 575px;
+		margin: 0 auto;
 	}
-	
+
+	.price_two_content .price_two_item:first-child,
+	.price_two_content .price_two_item:nth-child(2){
+		margin-bottom: 15px;
+	}
+
+	.price_two_content .price_two_item{
+		max-width: 280px;
+		padding: 40px;
+	}
+
+	.price_two_title-1, .price_two_title-2{
+		padding-left: 0;
+		padding-top: 145px;
+	}
+	.price_two_content .price_two_item .price_two_title-1::before{
+		width: 165px;
+		height: 120px;
+	}
+
+	.price_two_content .price_two_item .price_two_text-1,
+	.price_two_content .price_two_item .price_two_text-2{
+		padding-left: 0;
+	}
+
+	.price_two_item .video_control_block{
+		height: 165px;
+	}
+}
+
+
+
+@media(max-width: 630px){
+	.price_two_content{
+		max-width: 280px;
+	}
+	.price_two_content .price_two_item{
+		margin-bottom: 15px;
+	}
+
+	.price_two_content .block_video{
+		min-height: 350px;
+	}
+}
+
+
+@media(max-width: 750px){
 	.price_two_container h2{
 		font-size: 25px;
-	}
-	
-	.price_two_content > div{
-		margin-right: 0;
-	}
-	
-	.price_two_content .block_video{
-		height: 100%;
-		padding: 40px;
 	}
 }
 
