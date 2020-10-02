@@ -9,150 +9,110 @@
 }
 
 .price_two_container{
-	width: 875px;
+	max-width: 875px;
+	width: 100%;
 	margin: 0 auto;
+	padding: 0 10px;
 	h2{
 		margin-bottom: 65px;
 		color: @text-fff;
 	}
 }
 
-.price_two_content{
-	.flex_box();
-	.jus_center();
-	.flex_wrap();
-}
 
 .price_two_content{
-	
-	perspective: 1000px;
-	>div{
-		width: 410px;
-		margin:0 50px 65px 0;
-		background-color:@color-white;
-		box-shadow: 0px 20px 50px rgba(47, 55, 237, 0.12);
-		border-radius:10px;
-		padding:55px 60px;
-		h3{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.price_two_item{
+		max-width: 410px;
+		width: 100%;
+		padding: 55px 65px;
+		background-color: @color-white;
+		border-radius: 10px;
+		box-shadow: 0 2px 5px @color-border;
+
+		.price_two_item_title{
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 143.55%;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: @color-secondary;
 			margin-bottom: 10px;
 			position: relative;
-			letter-spacing: 0.05em;
 		}
-		p{color:@text-color-secondary;}
-	}
-	
-	>div:nth-child(even){margin-right:0;}
-	
-	>div:first-child,
-	>div:nth-child(2),
-	>div:last-child{
-		padding-left: 160px;
-		h3::before{
-			content: "";
-			width: 80px;
-			height: 80px;
-			background: url("../img/priceimg.png")no-repeat;
-			position: absolute;
-			left:-100px;
-			top: 0;
-			background-position: -182px -5px;
+
+		.price_two_item_text{
+			font-size: 14px;
+			line-height: 143.55%;
+			color: @text-color-secondary;
 		}
-	}
-	
-	>div:first-child{
-		background-color:transparent;
-		overflow: hidden;
-		box-shadow:none;
-		position: relative;
-		h3{
-			display: none;
-		}
-		h3::before{
-			width: 167px;
-			height: 118px;
-			background-position: -5px -5px;
-			display: none;
+		.price_two_text-1,
+		.price_two_text-2{
+			padding-left: 100px;
 		}
 	}
 
-	.block_video{
-		line-height: 0;
-		.price_two_video{
-			width:100%;
-			position: relative;
-		}
-		video{
-			width: 100%;
-			height: auto;
-			object-fit: cover;
-			border-radius: 10px;
-			outline: 0;
-		}
-		h3{
-			margin-top: 30px;
-		}
+	.price_two_item:first-child,
+	.price_two_item:nth-child(2){
+		margin-bottom: 60px;
 	}
 }
 
-
-
-.price_two_content > div:first-child::after{
+.price_two_title-1,
+.price_two_title-2{
+	padding-left: 100px;
+}
+.price_two_title-3{
+	margin-top: 30px;
+}
+.price_two_title-4{
+	padding-top: 100px;
+}
+.price_two_item_title:not(.price_two_title-3)::before{
 	content: "";
+	width: 80px;
+	height: 80px;
+	position: absolute;
+}
+
+
+.price_two_title-1::before{
+	background: url("../img/book.png")no-repeat;
+	background-size: cover;
+	left: 0;
+	top: 0;
+}
+.price_two_title-2::before{
+	background: url("../img/copybook.png")no-repeat;
+	background-size: cover;
+	left: 0;
+	top: 0;
+}
+.price_two_title-4::before{
+	background: url("../img/smile.svg")no-repeat;
+	top: 0;
+	left: 0;
+}
+
+// style  for setting vodeo 
+
+.price_two_content .block_video{
+	padding-bottom: 105px;
+}
+.price_two_video{
 	width: 100%;
 	height: 100%;
-	position: absolute;
-	top: 0;
-	right: -410px;
-	background: url("../img/secondary_img/CDM.jpg")no-repeat;
-	background-size: 100% 100%;
-	transition: 1s;
-}
 
-.price_two_content > div:first-child:hover::after{
-	right: 0;
-}
-
-.video_fill_copy{
-		width: 100%;
-		height: 100%;
-		background-color:rgba(0, 0, 0, 0.1);
-		position: absolute;
-		top: 0;
-		left: 0;
+	video{
+		outline: none;
 		border-radius: 10px;
-	.play_btn_copy{
-			position: absolute;
-			margin: auto;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			top: 0;
-			cursor: pointer;
-			width: 70px;
-			height: 70px;
-			border-radius: 100%;
-			background-color: rgba(47, 128, 237, 0.62);
-		.play_btn_triagle_copy{
-			border: 15px solid;
-			margin-left: 31px;
-			margin-top: 20px;
-			display: inline-block;
-			border-color: transparent transparent transparent #fff;
-			cursor: pointer;
-			&:active{
-				transform: scale(1.1);
-				box-shadow: 0 0 10px 5px rgba(47, 128, 237, 0.42);
-			}
-		}
 	}
 }
 
-
-
-
-
-
-
-
-
-
+.price_two_item .video_control_block .vjs-poster{
+	border-radius: 8px;
+}

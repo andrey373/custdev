@@ -51,7 +51,7 @@ $(function(){
 
 
 
-/*    scroll more slowly       */
+/*    scroll more slowly    */
 	$('a[href^="#"]').click(function(){
 		let target = $(this).attr('href');
 		$('html,body').animate(
@@ -61,6 +61,7 @@ $(function(){
 			800
 		);
 	});
+	
 
 });
 
